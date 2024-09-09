@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>Lounge Hair</title>
+  <link rel="stylesheet" href="dist/style.css">
+</head>
+<div>
+<body class="bg-bgGray smMd:h-auto">
+  <div id="nav">
+    <div onclick="navTop()" class="text-3xl cursor-pointer smMd:bg-black smMd:my-10 md:ml-tabletSide sm:ml-mobileSide">Lounge hair</div>
+    <div id="hamburgerMenu" onclick="openHamburgerMenu()" class="lg:hidden">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="lg:hidden absolute -z-10 bg-black w-full h-full"></div>
+    <ul id="navUl" class="navUl">
+      <li id="navDiensten" onclick="navigate('diensten')" class="navText">Diensten</li>
+      <div class="navLine"></div>
+      <li id="navZaak" onclick="navigate('zaak')" class="navText">Zaak</li>
+      <div class="navLine"></div>
+      <li id="navOpeningstijden" onclick="navigate('openingstijden')" class="navText">Openingstijden</li>
+      <div class="navLine"></div>
+      <li id="navContact" onclick="navigate('contact')" class="navText">Contact</li>
+      <div class="lg:hidden smMd:navLine invisible"></div>
+      <div class="smMd:flex">
+        <button id="navBtnMobile" class="lg:hidden text-md bg-black">Maak een afspraak</button>
+        <div class="flex-grow lg:hidden">
+          <svg class="fill-amber-400 h-full ml-auto" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+        </div>
+      </div>
+    </ul>
+    <button id="navBtn" class="smMd:hidden invisible text-md">Maak een afspraak</button>
+  </div>
+  <div id="fold" class="relative">
+    <img id="foldImg" class="w-full opacity-80 object-cover self-end md:object-[60%] lg:object-left" src="images/hairGold2.jpg">
+    <div id="foldText" class="absolute smMd:m-auto smMd:top-1/2 smMd:left-0 smMd:right-0 smMd:w-fit lg:left-1/2 lg:top-1/3">
+      <div class="text-black text-2xl">Kapperszaak</div>
+      <div class="text-black text-8xl ssm:text-[79px]">Lounge <br> hair</div>
+      <button class="text-lg mt-8 border-black border-3">Maak een afspraak</button>
+    </div>
+  </div>
+  <div id="diensten" class="blocks">
+    <h1>Diensten</h1>
+    <div id="dienstenGrid" style="mask-image: -webkit-gradient(linear, left 70%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0))); -webkit-mask-image: -webkit-gradient(linear, left 70%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))">
+      <div class="dienstenText sm:order-1">
+        <div class="dienstenTextTitle">Title</div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+          <br> <br>
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+        <div class="dienstenTextPrice">€20,-</div>
+      </div>
+      <div class="gridImg sm:order-2">
+        <img class="m-auto" src="imagesDiensten/hairRed.jpg">
+      </div>
+
+      <div class="gridImg sm:order-4">
+        <img class="m-auto" src="imagesDiensten/hairRed.jpg">
+      </div>
+      <div class="dienstenText sm:order-3">
+        <div class="dienstenTextTitle">Title</div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+          <br> <br>
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+        <div class="dienstenTextPrice">€20,-</div>
+      </div>
+
+      <div class="dienstenText sm:order-5">
+        <div class="dienstenTextTitle">Title</div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+          <br> <br>
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+        <div class="dienstenTextPrice">€20,-</div>
+      </div>
+      <div class="gridImg sm:order-6">
+        <img class="m-auto" src="imagesDiensten/hairRed.jpg">
+      </div>
+
+      <div class="gridImg sm:order-8">
+        <img class="m-auto" src="imagesDiensten/hairRed.jpg">
+      </div>
+      <div class="dienstenText sm:order-7">
+        <div class="dienstenTextTitle">Title</div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+          <br> <br>
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+        <div class="dienstenTextPrice">€20,-</div>
+      </div>
+    </div>
+    <div id="dienstenGridBtnContainer">
+      <button id="dienstenGridBtn" onclick="dienstenMore()">
+        Meer
+      </button>
+    </div>
+  </div>
+  <div id="zaak" class="blocks">
+    <h1>Zaak</h1>
+    <div class="flex smMd:flex-col gap-5">
+      <div class="lg:w-1/2">
+        informatie informatie informatie informatie etc etc etc
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+          <br> <br>
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+      </div>
+      <div class="lg:w-1/2 flex md:justify-between">
+        <div onclick="zaakSlideImageToLeft()" class="zaakImagesArrowBtns">
+          <svg class="zaakImagesArrows" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg> 
+        </div> 
+        <div class="relative md:w-4/5">
+          <div id="zaakImages" class="no-scrollbar">
+            <svg id="zaakImagesX" onclick="closeZaakImagesPopUp()" class="mdLg:hidden fixed top-[260px] right-[10px] fill-amber-400" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/></svg>
+            <div id="zaakImagesCounter" class="zaakImagesCounters fixed bottom-[305px] p-1"><span id="zaakImagesCounterCurrentImg">1</span>/<span id="zaakImagesCountertotalImgs"></span></div>
+            <img src="imagesZaak/zaak1.jpg">
+            <img src="imagesZaak/zaak1.jpg">
+            <img src="imagesZaak/zaak1.jpg">
+            <img src="imagesZaak/zaak1.jpg">
+            <img src="imagesZaak/zaak1.jpg">
+            <img src="imagesZaak/zaak1.jpg">
+          </div>
+          <div id="zaakImagesMini" class="no-scrollbar">
+            <div id="zaakImagesMiniCounter" class="zaakImagesCounters absolute bottom-0 p-0.5"><span id="zaakImagesMiniCounterCurrentImg">1</span>/<span id="zaakImagesMiniCountertotalImgs"></span></div>
+            <img onclick="zaakSlideImages(0)" src="imagesZaak/zaak1.jpg" class="selected">
+            <img onclick="zaakSlideImages(1)" src="imagesZaak/zaak1.jpg">
+            <img onclick="zaakSlideImages(2)" src="imagesZaak/zaak1.jpg">
+            <img onclick="zaakSlideImages(3)" src="imagesZaak/zaak1.jpg">
+            <img onclick="zaakSlideImages(4)" src="imagesZaak/zaak1.jpg">
+            <img onclick="zaakSlideImages(5)" src="imagesZaak/zaak1.jpg">
+          </div>
+        </div>
+        <div class="zaakImagesArrowBtns">
+          <svg onclick="zaakSlideImageToRight()" class="zaakImagesArrows" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="openingstijden" class="blocks bg-mainGray">
+    <h1>Openingstijden</h1>
+    <ul id="openingstijdenContainer" class="grid grid-cols-2 gap-x-5 gap-y-10 text-2.5xl sm:text-0.5xl ssm:text-lg">
+      <li id="monday" class="openingstijdenDays">Maandag:</li><li id="mondayTime">9:00 - 18:00</li>
+      <li id="tuesday" class="openingstijdenDays">Dinsdag:</li><li id="tuesdayTime">9:00 - 18:00</li>
+      <li id="wednesday" class="openingstijdenDays">Woensdag:</li><li id="wednesdayTime">9:00 - 19:00</li>
+      <li id="thursday" class="openingstijdenDays">Donderdag:</li><li id="thursdayTime">9:00 - 19:00</li>
+      <li id="friday" class="openingstijdenDays">Vrijdag:</li><li id="fridayTime">9:00 - 19:00</li>
+      <li id="saturday" class="openingstijdenDays">Zaterdag:</li><li id="saturdayTime">9:00 - 16:00</li>
+      <li id="sunday" class="openingstijdenDays">Zondag:</li><li id="sundayTime">gesloten</li>
+    </ul>
+  </div>
+  <div id="contact" class="blocks">
+    <h1>Contact</h1>
+    <div class="flex sm:flex-col gap-4 lg:gap-40 sm:gap-5">
+      <div class="flex flex-col justify-between">
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+        <br> 
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+        <br class="mdLg:hidden">
+        <div class="flex">
+          <div>
+            <div>Telefoon: <span class="underline underline-offset-2 font-semibold cursor-pointer">06-12345678</span></div>
+            <div>E-mail: <span class="underline underline-offset-2 font-semibold cursor-pointer">mail@mail.com</span></div>
+          </div>
+          <div class="flex-grow">
+            <svg class="fill-amber-400 h-full ml-auto" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="images/contactImage.jpg">
+      </div>
+    </div>
+  </div>
+  <footer id="footer" class="blocks flex sm:flex-col bg-lightGray sm:gap-5">
+    <div class="text-6xl">Lounge <br> Hair</div>
+    <ul class="grid grid-flow-col grid-rows-4 gap-5 grow mdLg:justify-around mt-5">
+      <li>linkje</li>
+      <li>linkje</li>
+      <li>linkje</li>
+      <li>linkje</li>
+      <li>linkje</li>
+      <li>linkje</li>
+      <li>linkje</li>
+      <li>linkje</li>
+      <li>linkje</li>
+      <li>linkje</li>
+      <li>linkje</li>
+      <li>linkje</li>
+    </ul>
+  </footer>
+</div>
+</body>
+</html>
+<script src="dist/script.js"></script>
