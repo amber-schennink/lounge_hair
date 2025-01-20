@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  *{
+    @apply text-mainYellow
+  }
+  button{
+    @apply rounded-md p-4 font-bold bg-black border-2 border-mainYellow hover:text-black hover:bg-mainYellow
+  }
+
+  .blocks{
+    @apply text-slate-50 py-10 px-mainSide md:px-tabletSide sm:px-mobileSide relative
+  }
+  .blocks > h1{
+    @apply text-5xl sm:text-4xl ssm:text-3xl mb-10
+  }
+
+  #nav{
+    @apply sticky top-0 z-20 lg:py-10 lg:px-mainSide bg-black  w-full flex justify-between
+  }
+  .navUl{
+    @apply flex flex-row gap-10 
+  }
+  .navText{
+    @apply text-lg cursor-pointer lg:my-auto hover:font-bold hover:underline hover:underline-offset-4
+  }
+  .navTextSelected{
+    @apply font-bold underline underline-offset-4
+  }
+  .navLine{
+    @apply w-0.5 bg-mainYellow
+  }
+  @media screen and (max-width: 1023px) {
+    .navUl{
+      @apply justify-between absolute overflow-hidden h-screen max-h-0 w-screen bg-black -z-20 flex-col transition-max-heightPadding duration-500 px-mobileSide md:px-tabletSide 
+    }
+    .navUlSelected{
+      @apply max-h-screen
+    }
+    .navLine{
+      @apply w-full h-0.5 bg-mainYellow
+    }
+    #hamburgerMenu{
+      @apply w-9 aspect-square flex flex-col justify-between transition-rotate duration-500 my-10 mr-[50px] md:mr-[75px]
+    }
+    #hamburgerMenu > *{
+      @apply h-1 bg-mainYellow rounded-lg
+    }
+  }
+
+  #dienstenGrid{
+    @apply grid mdLg:grid-cols-2 max-h-max transition-max-height duration-500 ease-in-out overflow-hidden
+  }
+  .dienstenText{
+    @apply bg-mainGray p-10 flex flex-col justify-between smMd:gap-5
+  }
+  .dienstenTextTitle{
+    @apply text-4xl font-bold
+  }
+  .dienstenTextPrice{
+    @apply text-3xl font-semibold
+  }
+  .gridImg{
+    @apply flex bg-black w-full 
+  }
+  #dienstenGridBtnContainer{
+    @apply absolute left-0 right-0 transition ease-in-out duration-500 bottom-10
+  }
+  #dienstenGridBtn{
+    @apply block mx-auto text-lg z-10 relative
+  }
+
+  #zaakImages{
+    @apply flex w-full overflow-x-scroll mdLg:scroll-smooth snap-x snap-mandatory
+  }
+  #zaakImages > img{
+    @apply w-full flex-shrink-0 snap-center
+  }
+  #zaakImagesMini{
+    @apply flex mdLg:flex-wrap gap-1 pt-1
+  }
+  #zaakImagesMini > img{
+    @apply mdLg:w-miniImagesZaak flex-shrink-0 mdLg:opacity-50 cursor-pointer
+  }
+  #zaakImagesMini > .selected{
+    @apply opacity-100
+  }
+  .zaakImagesArrowBtns{
+    @apply h-15 cursor-pointer
+  }
+  .zaakImagesArrows{
+    @apply h-full fill-mainYellow stroke-black stroke-[10px] 
+  }
+  .zaakImagesCounters{
+    @apply mdLg:hidden
+  }
+  @media screen and (max-width: 767px) {
+    #zaakImages{
+      @apply fixed bg-gray-500 bg-opacity-50 px-[10px] z-30 top-0 bottom-0 left-0 gap-[10px] invisible
+    }
+    #zaakImages > img{
+      @apply object-contain
+    }
+    #zaakImagesMini{
+      @apply overflow-x-scroll scroll-smooth snap-x snap-mandatory 
+    }
+    #zaakImagesMini > img{
+      @apply w-full snap-center
+    }
+    .zaakImagesArrowBtns{
+      @apply hidden
+    }
+    .zaakImagesCounters{
+      @apply mx-auto bg-gray-700 bg-opacity-70
+    }
+  }
+
+  #openingstijdenContainer > li{
+    @apply underline-offset-4
+  }
+  .openingstijdenDays{
+    @apply ml-auto 
+  }
+
+  #footer > ul > li{
+    @apply cursor-pointer hover:underline hover:underline-offset-2
+  }
+
+
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+  .no-scrollbar {
+      -ms-overflow-style: none;  
+      scrollbar-width: none;  
+  }
+}
